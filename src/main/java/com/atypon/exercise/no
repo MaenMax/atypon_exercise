@@ -1,0 +1,39 @@
+package com.atypon.exercise;
+
+import com.spoonacular.client.ApiClient;
+import com.spoonacular.client.ApiException;
+import com.spoonacular.client.Configuration;
+import com.spoonacular.client.auth.*;
+import com.spoonacular.client.model.*;
+import com.spoonacular.DefaultApi;
+import com.spoonacular.RecipesApi;
+
+public class App {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.spoonacular.com");
+
+    // Configure API key authorization: apiKeyScheme
+    ApiKeyAuth apiKeyScheme = (ApiKeyAuth) defaultClient.getAuthentication("apiKeyScheme");
+    apiKeyScheme.setApiKey("f650fadc9d444c97ac39979ecd5e8851");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKeyScheme.setApiKeyPrefix("Token");
+
+    RecipesApi apiInstance = new RecipesApi(defaultClient);
+    AnalyzeRecipeRequest analyzeRecipeRequest = new AnalyzeRecipeRequest(); 
+    analyzeRecipeRequest.setTitle("Maen");
+    String language = "en"; // String | The input language, either \"en\" or \"de\".
+    Boolean includeNutrition = false; // Boolean | Whether nutrition data should be added to correctly parsed ingredients.
+    Boolean includeTaste = false; // Boolean | Whether taste data should be added to correctly parsed ingredients.
+    try {
+      Object result = apiInstance.searchRecipes(analyzeRecipeRequest, language, includeNutrition, includeTaste);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#analyzeRecipe");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
