@@ -14,8 +14,6 @@ This Spring Boot project provides a set of REST APIs that interact with the Spoo
 - [Endpoints](#endpoints)
 - [How to Run](#how-to-run)
 - [Makefile Commands](#makefile-commands)
-- [Technologies Used](#technologies-used)
-- [License](#license)
 
 ## Features
 
@@ -114,6 +112,11 @@ atypon-exercise/
    git clone git@github.com:MaenMax/atypon_exercise.git
    cd atypon_exercise
    ```
+2. **Export API_KEY env variable**:
+   ```bash
+   export API_KEY=<your_own_spoonacular_api_key>
+   ```
+   the aplication is going to start on port 8080
 1. **build and run the project**:
    ```bash
    mvn spring-boot:run
