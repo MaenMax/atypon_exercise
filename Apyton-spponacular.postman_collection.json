@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "888e75d2-ec52-448d-a86e-dc74b7396db6",
+		"name": "Apyton-spponacular",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30265441"
+	},
+	"item": [
+		{
+			"name": "Search recipe",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get recipe information",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get customized recipe information",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

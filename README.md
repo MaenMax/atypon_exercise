@@ -122,3 +122,5 @@ atypon-exercise/
    mvn spring-boot:run
    ```
    the aplication is going to start on port 8080
+
+   NOTE: You can find the exported Apyton-spponacular.postman_collection.json collection if you would like to test the APIs using POSTMAN, just like I did.
