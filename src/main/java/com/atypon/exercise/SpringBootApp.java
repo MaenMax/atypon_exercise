@@ -1,6 +1,8 @@
+/**
+ * Author: Maen Abu Hammour
+ * Date: September 11, 2024
+ */
 package com.atypon.exercise;
-
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

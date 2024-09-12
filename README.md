@@ -65,6 +65,8 @@ atypon-exercise/
        "totalResults": 285
      }
      ```
+    - **Design Decision**:
+    I have decided to pass the name of the recipe and the number of results to return.
 
 2. **Get Recipe Information**
    - **Endpoint**: `/recipes/{name}/information`
@@ -98,7 +100,8 @@ atypon-exercise/
      ```bash
      553.76
      ```
-
+   - **Design Decision**:
+    I have decided to make this API similar to  GET /recipes/pasta/information , but used POST here to be Restfull-friendly as this request includes body to be sent to the cloud (execluded ingredients).
 ## How to Run
 
 ### Prerequisites
